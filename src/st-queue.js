@@ -18,11 +18,9 @@ module.exports = class Queue {
     this.head = null;
     this.end = null;
   }
-
   getUnderlyingList() {
     return this.head;
   }
-
   enqueue(value) {
     if (this.end) {
       this.end.next = new ListNode(value);

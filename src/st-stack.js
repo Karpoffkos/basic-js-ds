@@ -19,11 +19,9 @@ const { NotImplementedError } = require('../extensions/index.js');
   push(el) {
     this.array.push(el);
   }
-
   pop() {
     this.array.pop();
   }
-
   peek() {
     return this.array[this.array.length-1];
   }
