@@ -1,4 +1,4 @@
-const { NotImplementedError } = require('../extensions/index.js');
+const { NotImplementedError, ListNode } = require('../extensions/index.js');
 
 /**
  * Given a singly linked list of integers l and an integer k,
@@ -21,10 +21,10 @@ const { NotImplementedError } = require('../extensions/index.js');
 
 module.exports = function removeKFromList(l,k) {
     let arr = [];
-    let el = l;
-    while(el) {
-      if (el.value !== k) arr.push(el);
-      el = el.next;
+
+    while(l) {
+      if (l.value !== k) arr.push(l);
+      l = l.next;
     }
     return arr.reverse().reduce((i, current) => {
       if (i) {

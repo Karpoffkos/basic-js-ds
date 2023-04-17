@@ -20,7 +20,9 @@ const { NotImplementedError } = require('../extensions/index.js');
     this.array.push(el);
   }
   pop() {
+    let top =  this.array[this.array.length-1];
     this.array.pop();
+    return top;
   }
   peek() {
     return this.array[this.array.length-1];
