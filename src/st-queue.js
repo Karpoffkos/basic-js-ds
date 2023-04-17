@@ -23,7 +23,7 @@ module.exports = class Queue {
     return this.head;
   }
 
-  enqueue(/* value */) {
+  enqueue(value) {
     if (this.end) {
       this.end.next = new ListNode(value);
       this.end = this.end.next;
